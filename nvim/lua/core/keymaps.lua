@@ -63,6 +63,9 @@ map('n', '<leader>w', ':w<CR>')
 -- Close the window easily
 map('n', '<leader>q', ':q<CR>')
 
+-- Yank the whole file easy
+map('n', '<leader>y', ':%y<CR>')
+
 
 -- PLUGINS KEYMAPS
 
