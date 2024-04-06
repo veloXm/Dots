@@ -34,7 +34,7 @@ bindsym $mod+Return exec --no-startup-id $wm_setting_app_terminal
 bindsym $mod+$smod+Return exec $wm_setting_app_browser
 
 # Start a program launcher
-bindsym $mod+d exec $wm_setting_app_launcher
+bindsym $mod+Tab exec $wm_setting_app_launcher
 
 # Start a file manager
 bindsym $mod+e exec $wm_setting_app_files
@@ -154,7 +154,7 @@ client.background       $wm_color_background
 ### Start with i3
 
 # WALLPAPER
-exec --no-startup-id feh --bg-fill /home/veloXm/archbtw.png
+exec --no-startup-id feh --bg-fill /home/veloXm/Pictures/neon.jpg
 
 # POLYBAR
 exec --no-startup-id /home/veloXm/.config/polybar/i3_bar.sh
@@ -185,7 +185,10 @@ bindsym $mod+$smod+c reload
 # Exit i3 (logs you out of your X session)
 bindsym $mod+$smod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# Shut-Down
+# Powermenu
+bindsym $mod+F4 exec /home/veloXm/.config/rofi/powermenu/type-6/powermenu.sh
+
+# Shutdown
 bindsym $mod+$smod+F4 exec shutdown now
 
 # Take a Screenshot
