@@ -1,14 +1,13 @@
--- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable", -- latest stable release
-        lazypath,
-    })
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -51,6 +50,31 @@ lazy.setup({
                 -- add any options here
             },
             lazy = false,
+        },
+
+        -- Neo-clip
+        {
+            "AckslD/nvim-neoclip.lua",
+            requires = {
+                {'nvim-telescope/telescope.nvim'},
+            },
+            config = function()
+                require('neoclip').setup()
+            end,
+        },
+
+        -- Colorizer
+        -- { 'norcalli/nvim-colorizer.lua' },
+        -- Enable me for smooth web dev
+
+        -- Eye-liner
+        { "jinh0/eyeliner.nvim",
+        config = function()
+            require'eyeliner'.setup {
+                highlight_on_key = true, -- show highlights only after keypress
+                dim = false              -- dim all other characters if set to true (recommended!)
+            }
+            end,
         },
 
         -- LSP-kind
