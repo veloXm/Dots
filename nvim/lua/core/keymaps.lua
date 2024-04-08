@@ -60,11 +60,8 @@ map('n', '<leader>r', ':so %<CR>')
 -- Fast saving with <leader> and w
 map('n', '<leader>w', ':w<CR>')
 
--- Close the window easily
-map('n', '<leader>q', ':q<CR>')
-
--- Yank the whole file easy
-map('n', '<leader>y', ':%y<CR>')
+-- Save and cllose the window easily
+map('n', '<leader>q', ':wq<CR>')
 
 
 -- PLUGINS KEYMAPS
@@ -75,3 +72,6 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- Neo-clip
+map('n', '<leader>y', ':Telescope neoclip<CR>')
