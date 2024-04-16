@@ -8,9 +8,9 @@ local opt = vim.opt   -- Set options (global/buffer/windows-scoped)
 opt.clipboard = 'unnamedplus'                  -- Copy/paste to system clipboard
 opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 opt.swapfile = false                           -- No swap file
-opt.colorcolumn = '81'                         -- Line lenght marker at 80 columns
+-- opt.colorcolumn = '81'                         -- Line lenght marker at 80 columns
 -- opt.textwidth = 80                             -- Set textwidth to 80 columns
--- opt.wrap = true                                -- Wrap lines
+opt.wrap = false                               -- Wrap lines
 vim.opt.fillchars:append({ eob = " " })        -- To remove tilde(~)
 vim.cmd([[autocmd FileType * setlocal formatoptions-=ro]]) -- No comment on new line if existing line is commented
 
@@ -27,7 +27,7 @@ opt.linebreak = true        -- Wrap on word boundary
 opt.termguicolors = true    -- Enable 24-bit RGB colors
 opt.laststatus=3            -- Set global statusline
 opt.cursorline= true        -- cursorline
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 19      -- To keep the cursor in the center of the screen all the time
 vim.opt.signcolumn = "yes"
 
 -- Undo options

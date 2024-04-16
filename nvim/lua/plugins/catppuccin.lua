@@ -29,7 +29,13 @@ require("catppuccin").setup({
         types = {},
         operators = {},
     },
-    color_overrides = {},
+    color_overrides = {
+        mocha = {
+            base = "#000000",
+            mantle = "#000000",
+            crust = "#000000",
+        },
+    },
     custom_highlights = {},
     integrations = {
         cmp = true,
@@ -44,6 +50,3 @@ require("catppuccin").setup({
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
 })
-
--- setup must be called before loading
-vim.cmd.colorscheme "catppuccin"

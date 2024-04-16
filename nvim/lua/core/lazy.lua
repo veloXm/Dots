@@ -23,6 +23,9 @@ lazy.setup({
         -- Catppuccin
         { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
+        -- Moonfly
+        { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+
         -- Telescope
         {
             'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -64,18 +67,7 @@ lazy.setup({
         },
 
         -- Colorizer
-        -- { 'norcalli/nvim-colorizer.lua' },
-        -- Enable me for smooth web dev
-
-        -- Eye-liner
-        { "jinh0/eyeliner.nvim",
-        config = function()
-            require'eyeliner'.setup {
-                highlight_on_key = true, -- show highlights only after keypress
-                dim = false              -- dim all other characters if set to true (recommended!)
-            }
-            end,
-        },
+        { 'norcalli/nvim-colorizer.lua' },
 
         -- LSP-kind
         { "onsails/lspkind.nvim" },

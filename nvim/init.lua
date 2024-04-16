@@ -18,5 +18,8 @@ require('plugins.telescope-undo')
 require('plugins.lualine')
 require('plugins.lsp-zero')
 
+-- colorscheme
+vim.cmd.colorscheme "catppuccin"
+
 -------------------------------------------
 print("“WHAT WE DO IN LIFE, ECHOES IN ETERNITY”")
