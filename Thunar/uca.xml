@@ -36,4 +36,16 @@
 	<directories/>
 	<other-files/>
 </action>
+<action>
+	<icon>x-package-repository</icon>
+	<name>Extract to</name>
+	<submenu>7z</submenu>
+	<unique-id>1713248857898801-1</unique-id>
+	<command>bash -c &apos;mkdir -p &quot;$(basename &quot;$0&quot; | sed &quot;s/\.[^.]*$//&quot;)&quot; &amp;&amp; 7z x &quot;$0&quot; -o&quot;$(basename &quot;$0&quot; | sed &quot;s/\.[^.]*$//&quot;)&quot;&apos; %f</command>
+	<description>Extracts the archive to its own folder</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+</action>
 </actions>
