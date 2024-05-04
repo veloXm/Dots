@@ -26,6 +26,16 @@ lazy.setup({
         -- Moonfly
         { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
+        -- Nvim-tree
+        {
+            "nvim-tree/nvim-tree.lua",
+            version = "*",
+            lazy = false,
+            dependencies = {
+                "nvim-tree/nvim-web-devicons",
+            }
+        },
+
         -- Telescope
         {
             'nvim-telescope/telescope.nvim', tag = '0.1.5',

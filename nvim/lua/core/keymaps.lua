@@ -63,6 +63,11 @@ map('n', '<leader>w', ':w<CR>')
 -- Save and cllose the window easily
 map('n', '<leader>q', ':wq<CR>')
 
+-- Compile a C program
+map('n', '<leader>cg', ':!gcc % -o %:r.out<CR>')
+
+-- Compile a C++ program
+map('n', '<leader>gc', ':!g++ % -o %:r.out<CR>')
 
 -- PLUGINS KEYMAPS
 
@@ -75,3 +80,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- Neo-clip
 map('n', '<leader>y', ':Telescope neoclip<CR>')
+
+-- Live-server
+map('n', '<leader>ll', ':LiveServer<CR>')

@@ -17,6 +17,8 @@ require('plugins.catppuccin')
 require('plugins.telescope-undo')
 require('plugins.lualine')
 require('plugins.lsp-zero')
+require('plugins.colorizer')
+require('plugins.nvim-tree')
 
 -- colorscheme
 vim.cmd.colorscheme "catppuccin"
