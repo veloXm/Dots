@@ -56,6 +56,13 @@ lazy.setup({
             opts = {} -- this is equalent to setup({}) function
         },
 
+        -- Alpha
+        {
+            'goolord/alpha-nvim',
+            dependencies = { 'nvim-tree/nvim-web-devicons' },
+        },
+
+
         -- Comment
         {
             'numToStr/Comment.nvim',

@@ -64,10 +64,10 @@ map('n', '<leader>w', ':w<CR>')
 map('n', '<leader>q', ':wq<CR>')
 
 -- Compile a C program
-map('n', '<leader>cg', ':!gcc % -o %:r.out<CR>')
+map('n', '<leader>gc', ':!gcc % -o %:r.out<CR>')
 
 -- Compile a C++ program
-map('n', '<leader>gc', ':!g++ % -o %:r.out<CR>')
+map('n', '<leader>gC', ':!g++ % -o %:r.out<CR>')
 
 -- PLUGINS KEYMAPS
 
