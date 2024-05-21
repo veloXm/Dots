@@ -6,8 +6,8 @@
 set $mod                             Mod4
 set $smod                            Shift
 set $wm_setting_font                 pango:JetBrainsMono Nerd Font, Semibold 11
-set $wm_setting_gap_width            10
-set $wm_setting_gap_heigth           10
+set $wm_setting_gap_width            5
+set $wm_setting_gap_heigth           5
 set $wm_setting_border_size          2
 set $wm_setting_key_left             h
 set $wm_setting_key_down             j
@@ -67,8 +67,6 @@ bindsym $mod+p exec $wm_setting_app_launcher
 # Start a file manager
 bindsym $mod+e exec $wm_setting_app_files
 
-# Display Wifi Rofi GUI
-bindsym Pause exec /home/veloXm/zzz/rofi-network-manager/rofi-network-manager.sh
 
 ### Workspaces ###
 # Define names for default workspaces for which we configure key bindings later on.
@@ -156,9 +154,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # ### Change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-# bindsym $mod+e layout toggle split
+bindsym $mod+$smod+s layout stacking
+bindsym $mod+$smod+w layout tabbed
+# bindsym $mod+$smod+t layout toggle split
 #         ^^^^^^ duplicate as in bindsym of file_manager
 
 ### Gaps ###
@@ -198,7 +196,6 @@ exec --no-startup-id feh --bg-fill /home/veloXm/Pictures/neon.jpg
 # POLYBAR
 exec --no-startup-id /home/veloXm/.config/polybar/i3_bar.sh
 
-
 ### Miscellaneous settings ###
 # Set the font used for titlebars (which are hidden here)
 font $wm_setting_font
@@ -234,3 +231,6 @@ bindsym $mod+$smod+F4 exec shutdown now
 bindsym Print exec /home/veloXm/zzz/screenshot.sh
 bindsym $smod+Print exec /home/veloXm/zzz/screenshot.sh shift
 bindsym Control+Print exec /home/veloXm/zzz/screenshot.sh ctrl
+
+# Network manager
+bindsym Pause exec --no-startup-id alacritty --config-file=/home/veloXm/.config/alacritty/alacrittyBW.toml --command nmtui
