@@ -25,4 +25,4 @@ require('plugins.nvim-tree')
 vim.cmd.colorscheme "catppuccin"
 
 -------------------------------------------
-print("“WHAT WE DO IN LIFE, ECHOES IN ETERNITY”")
+print("Whoozat! VISUALIZE THE DOOR !Whatzit")

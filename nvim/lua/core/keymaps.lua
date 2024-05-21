@@ -60,14 +60,14 @@ map('n', '<leader>r', ':so %<CR>')
 -- Fast saving with <leader> and w
 map('n', '<leader>w', ':w<CR>')
 
--- Save and cllose the window easily
-map('n', '<leader>q', ':wq<CR>')
-
 -- Compile a C program
 map('n', '<leader>gc', ':!gcc % -o %:r.out<CR>')
 
 -- Compile a C++ program
 map('n', '<leader>gC', ':!g++ % -o %:r.out<CR>')
+
+-- For Java
+map('n', '<leader>ja', ':!javac %<CR>')
 
 -- PLUGINS KEYMAPS
 
@@ -80,6 +80,3 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- Neo-clip
 map('n', '<leader>y', ':Telescope neoclip<CR>')
-
--- Live-server
-map('n', '<leader>ll', ':LiveServer<CR>')
