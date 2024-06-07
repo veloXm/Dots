@@ -5,6 +5,7 @@
 ### Variables for settings (This makes changing them WAY easyer!) ###
 set $mod                             Mod4
 set $smod                            Shift
+set $alt                             Mod1
 set $wm_setting_font                 pango:JetBrainsMono Nerd Font, Semibold 11
 set $wm_setting_gap_width            5
 set $wm_setting_gap_heigth           5
@@ -59,13 +60,13 @@ set $crust #11111b
 bindsym $mod+Return exec --no-startup-id $wm_setting_app_terminal
 
 # Start a web browser
-bindsym $mod+$smod+Return exec $wm_setting_app_browser
+bindsym $mod+$smod+Return exec --no-startup-id $wm_setting_app_browser
 
 # Start a program launcher
-bindsym $mod+p exec $wm_setting_app_launcher
+bindsym $mod+p exec --no-startup-id $wm_setting_app_launcher
 
 # Start a file manager
-bindsym $mod+e exec $wm_setting_app_files
+bindsym $mod+e exec --no-startup-id $wm_setting_app_files
 
 
 ### Workspaces ###
@@ -203,6 +204,9 @@ font $wm_setting_font
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Open go workflow : For the love of go : book
+bindsym $mod+$smod+g exec "/home/veloXm/zzz/load_layout.sh"
+
 # Enter fullscreen mode for the focused window
 bindsym $mod+f fullscreen toggle
 
@@ -227,10 +231,14 @@ bindsym $mod+F4 exec /home/veloXm/.config/rofi/powermenu/type-1/powermenu.sh
 # Shutdown
 bindsym $mod+$smod+F4 exec shutdown now
 
+# Network manager
+bindsym Pause exec --no-startup-id alacritty --config-file=/home/veloXm/.config/alacritty/alacrittyBW.toml --command nmtui
+
+# Cycle through workspaces
+bindsym $alt+Tab workspace next
+bindsym $alt+$smod+Tab workspace prev
+
 # Take a Screenshot
 bindsym Print exec /home/veloXm/zzz/screenshot.sh
 bindsym $smod+Print exec /home/veloXm/zzz/screenshot.sh shift
 bindsym Control+Print exec /home/veloXm/zzz/screenshot.sh ctrl
-
-# Network manager
-bindsym Pause exec --no-startup-id alacritty --config-file=/home/veloXm/.config/alacritty/alacrittyBW.toml --command nmtui
