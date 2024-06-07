@@ -66,8 +66,8 @@ map('n', '<leader>gc', ':!gcc % -o %:r.out<CR>')
 -- Compile a C++ program
 map('n', '<leader>gC', ':!g++ % -o %:r.out<CR>')
 
--- For Java
-map('n', '<leader>ja', ':!javac %<CR>')
+-- Compile a Go program
+map('n', '<leader>go', ':!go build %<CR>')
 
 -- PLUGINS KEYMAPS
 
