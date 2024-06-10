@@ -4,7 +4,7 @@
 screenshot_dir="$HOME/Pictures/Screenshots"
 
 # Timestamp for unique filenames
-timestamp=$(date +"%Y-%m-%d_%H-%M")
+timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
 
 # File name for the screenshot
 file_name="screenshot_$timestamp.jpg"
@@ -16,10 +16,19 @@ file_path="$screenshot_dir/$file_name"
 if [[ $1 == "shift" ]]; then
     # Take screenshot and save to clipboard
     maim | xclip -selection clipboard -t image/png
+
+    # Notify
+    dunstify "Screenshot saved $file_path!"
 elif [[ $1 == "ctrl" ]]; then
     # Take selective screenshot
     maim -s "$file_path"
+
+    # Notify
+    dunstify "Screenshot saved $file_path!"
 else
     # Take screenshot
     maim "$file_path"
+
+    # Notify
+    dunstify "Screenshot saved $file_path!"
 fi

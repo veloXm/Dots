@@ -8,3 +8,5 @@ i3-msg "workspace --no-auto-back-and-forth 3; append_layout ~/.config/i3/workspa
 (evince /home/veloXm/Books/For\ the\ Love\ of\ Go\ \(2023\)\ --\ John\ Arundel\ --\ 2022\ --\ Bitfield\ Consulting\ --\ 6d0e1a8e931de7fcc3bef5ab65c37d3e\ --\ Anna’s\ Archive.pdf &)
 (alacritty &)
 (alacritty &)
+
+dunstify 'Started setup for Golang (For the Love of Go, alacritty(2))'
