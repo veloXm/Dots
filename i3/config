@@ -197,12 +197,19 @@ exec --no-startup-id feh --bg-fill /home/veloXm/Pictures/neon.jpg
 # POLYBAR
 exec --no-startup-id /home/veloXm/.config/polybar/i3_bar.sh
 
+# DUNST
+exec --no-startup-id dunst -config /home/veloXm/.config/dunst/dunstrc
+
+
 ### Miscellaneous settings ###
 # Set the font used for titlebars (which are hidden here)
 font $wm_setting_font
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+
+## Shortcuts
 
 # Open go workflow : For the love of go : book
 bindsym $mod+$smod+g exec "/home/veloXm/zzz/load_layout.sh"
@@ -237,6 +244,14 @@ bindsym Pause exec --no-startup-id alacritty --config-file=/home/veloXm/.config/
 # Cycle through workspaces
 bindsym $alt+Tab workspace next
 bindsym $alt+$smod+Tab workspace prev
+
+# Clipmark
+bindsym $mod+i exec --no-startup-id /home/veloXm/zzz/AddToClipMark.sh
+bindsym $mod+Insert exec --no-startup-id /home/veloXm/zzz/CheckClipmark.sh
+
+# Close dunst notification
+bindsym $mod+minus exec --no-startup-id dunstctl close
+bindsym $mod+$smod+minus exec --no-startup-id dunstctl close-all
 
 # Take a Screenshot
 bindsym Print exec /home/veloXm/zzz/screenshot.sh
