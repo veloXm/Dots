@@ -157,7 +157,7 @@ bindsym $mod+r mode "resize"
 # ### Change container layout (stacked, tabbed, toggle split)
 bindsym $mod+$smod+s layout stacking
 bindsym $mod+$smod+w layout tabbed
-# bindsym $mod+$smod+t layout toggle split
+bindsym $mod+$smod+t layout toggle split
 #         ^^^^^^ duplicate as in bindsym of file_manager
 
 ### Gaps ###
@@ -246,7 +246,7 @@ bindsym $alt+Tab workspace next
 bindsym $alt+$smod+Tab workspace prev
 
 # Clipmark
-bindsym $mod+i exec --no-startup-id /home/veloXm/zzz/AddToClipMark.sh
+bindsym $mod+i exec --no-startup-id /home/veloXm/zzz/AddToClipmark.sh
 bindsym $mod+Insert exec --no-startup-id /home/veloXm/zzz/CheckClipmark.sh
 
 # Close dunst notification
