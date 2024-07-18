@@ -23,9 +23,6 @@ lazy.setup({
         -- Catppuccin
         { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
-        -- Moonfly
-        { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-
         -- Nvim-tree
         {
             "nvim-tree/nvim-tree.lua",
@@ -70,6 +67,11 @@ lazy.setup({
                 -- add any options here
             },
             lazy = false,
+        },
+
+        -- Toggle Term
+        {
+            'akinsho/toggleterm.nvim', version = "*", config = true
         },
 
         -- Neo-clip

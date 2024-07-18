@@ -20,8 +20,9 @@ require('plugins.lsp-zero')
 require('plugins.alpha')
 require('plugins.colorizer')
 require('plugins.nvim-tree')
+require('plugins.toggleterm')
 
--- colorscheme
+-- Color scheme
 vim.cmd.colorscheme "catppuccin"
 
 -------------------------------------------

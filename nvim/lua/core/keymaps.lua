@@ -35,6 +35,9 @@ map('n', '<leader>vs',':vsplit<CR>')
 -- map('i', 'kj', '<C-c>')
 map('i', 'jk', '<C-c>')
 
+-- map('n', ':Wq', ':wq<CR>')
+-- map('n', ':Q', ':q<CR>')
+
 -- Clear search highlighting with <leader> and c
 map('n', '<leader>c', ':nohl<CR>')
 
@@ -60,6 +63,9 @@ map('n', '<leader>r', ':so %<CR>')
 -- Fast saving with <leader> and w
 map('n', '<leader>w', ':w<CR>')
 
+-- Spell check
+map('n', '<F12>', ':setlocal spell! spelllang=en<CR>')
+
 -- Compile a C program
 map('n', '<leader>gc', ':!gcc % -o %:r.out<CR>')
 
@@ -80,3 +86,7 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- Neo-clip
 map('n', '<leader>y', ':Telescope neoclip<CR>')
+
+-- Toggle Term
+map('n', '<space><space>', ':ToggleTerm<CR>')
+map('n', '<space>v', ':ToggleTerm direction=vertical size=75<CR>')
