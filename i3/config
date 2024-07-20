@@ -16,7 +16,7 @@ set $wm_setting_key_up               k
 set $wm_setting_key_right            l
 
 set $wm_setting_app_files            thunar
-set $wm_setting_app_terminal         alacritty
+set $wm_setting_app_terminal         st
 set $wm_setting_app_browser          chromium
 set $wm_setting_app_launcher         /home/veloXm/.config/rofi/launchers/type-1/launcher.sh
 
@@ -211,14 +211,14 @@ floating_modifier $mod
 
 ## Shortcuts
 
-# Open go workflow : For the love of go : book
-bindsym $mod+$smod+g exec "/home/veloXm/zzz/load_layout.sh"
-
 # Enter fullscreen mode for the focused window
 bindsym $mod+f fullscreen toggle
 
 # Toggle between tiling and floating
 bindsym $mod+$smod+f floating toggle
+
+# Toggle border
+bindsym $mod+b border toggle
 
 # Kill the focused window
 bindsym $mod+$smod+q kill
@@ -257,3 +257,8 @@ bindsym $mod+$smod+minus exec --no-startup-id dunstctl close-all
 bindsym Print exec /home/veloXm/zzz/screenshot.sh
 bindsym $smod+Print exec /home/veloXm/zzz/screenshot.sh shift
 bindsym Control+Print exec /home/veloXm/zzz/screenshot.sh ctrl
+
+
+####################### Temporary
+bindsym $mod+space exec /home/veloXm/zzz/temp/space.sh
+
