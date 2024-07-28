@@ -60,7 +60,7 @@ color index_subject cyan default '.*'                                 # CYAN for
 
 # For new mail:
 color index brightyellow black "~N"                                   # BRIGHT YELLOW on BLACK for new mail
-color index_author brightred black "~N"                               # BRIGHT RED on BLACK for new mail author
+color index_author red black "~N"                                     # BRIGHT RED on BLACK for new mail author
 color index_subject brightcyan black "~N"                             # BRIGHT CYAN on BLACK for new mail subject
 
 # Progress bar colors:
