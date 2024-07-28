@@ -113,28 +113,28 @@ float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#000000", /* black */
-	"#eb3d54", /* red */
-	"#78bd65", /* green */
-	"#e5cd52", /* yellow */
-	"#4fb4d8", /* blue */
-	"#c46eb1", /* magenta */
-	"#85e0c9", /* cyan */
-	"white",   /* white */
+	"#1f1040", /* black */
+	"#ff628c", /* red */
+	"#b3ff66", /* green */
+	"#ffcf64", /* yellow */
+	"#6abeff", /* blue */
+	"#cd7bff", /* magenta */
+	"#00c4ff", /* cyan */
+	"#8c8cff",   /* white */
 
 	"#525560", /* bright grey */
-	"#f1223e", /* bright red */
-	"#6cc653", /* bright green */
-	"#edcd2c", /* bright yellow */
-	"#21acde", /* bright blue */
-	"#ce64b7", /* bright magenta */
-	"#63e9c7", /* bright cyan */
-	"white",   /* bright white */
+	"#ff0f0f", /* bright red */
+	"#b3ff09", /* bright green */
+	"#ffff00", /* bright yellow */
+	"#82cfff", /* bright blue */
+	"#e837ff", /* bright magenta */
+	"#00f2ff", /* bright cyan */
+	"#a7a7ff",   /* bright white */
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	[256] = "#cbcdd2", // foreground
+	[256] = "#b2ccff", // foreground
 	[257] = "#000000", // background
-	[258] = "#4fb4d8", // cursor
+	[258] = "#ff87ff", // cursor
 
 	"#cccccc",
 	"#555555",
