@@ -19,7 +19,7 @@ if [[ $1 == "shift" ]]; then
 
     # Notify
     dunstify "Screenshot copied to clipboard!"
-elif [[ $1 == "ctrl" ]]; then
+elif [[ $1 == "mod" ]]; then
     # Take selective screenshot
     maim -s "$file_path"
 
