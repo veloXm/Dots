@@ -6,6 +6,9 @@ set realname = "NAME HERE"
 
 set imap_user = "EMAIL_ID"
 set imap_pass = "PASS"
+set smtp_url="smtps://EMAIL_ID@smtp.gmail.com:465/"
+set smtp_pass="PASS"
+set smtp_authenticators="gssapi:login"
 
 set folder = "imaps://EMAIL_ID@imap.gmail.com/"
 set spoolfile = "+INBOX"
