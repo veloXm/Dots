@@ -18,7 +18,7 @@ set $wm_setting_key_right            l
 set $wm_setting_app_files            thunar
 set $wm_setting_app_terminal         st
 set $wm_setting_app_browser          chromium
-set $wm_setting_app_launcher         /home/veloXm/.config/rofi/launchers/type-1/launcher.sh
+set $wm_setting_app_launcher         $HOME/.config/rofi/launchers/type-1/launcher.sh
 
 set $wm_color_border_active_bg       #81A1C1
 set $wm_color_border_active_fg       #3B4252
@@ -192,13 +192,13 @@ client.placeholder      $overlay0                    $base                      
 ### Start with i3
 
 # WALLPAPER
-exec --no-startup-id feh --bg-fill /home/veloXm/Pictures/neon.jpg
+exec --no-startup-id feh --bg-fill $HOME/Pictures/neon.jpg
 
 # POLYBAR
-exec --no-startup-id /home/veloXm/.config/polybar/i3_bar.sh
+exec --no-startup-id $HOME/.config/polybar/i3_bar.sh
 
 # DUNST
-exec --no-startup-id dunst -config /home/veloXm/.config/dunst/dunstrc
+exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
 
 
 ### Miscellaneous settings ###
@@ -233,32 +233,30 @@ bindsym $mod+$smod+c reload
 bindsym $mod+$smod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Powermenu
-bindsym $mod+F4 exec /home/veloXm/.config/rofi/powermenu/type-1/powermenu.sh
+bindsym $mod+F4 exec $HOME/.config/rofi/powermenu/type-1/powermenu.sh
 
 # Shutdown
 bindsym $mod+$smod+F4 exec shutdown now
 
 # Network manager
-bindsym Pause exec --no-startup-id alacritty --config-file=/home/veloXm/.config/alacritty/alacrittyBW.toml --command nmtui
+bindsym Pause exec --no-startup-id alacritty --config-file=$HOME/.config/alacritty/alacrittyBW.toml --command nmtui
 
 # Cycle through workspaces
 bindsym $alt+Tab workspace next
 bindsym $alt+$smod+Tab workspace prev
 
 # Clipmark
-bindsym $mod+i exec --no-startup-id /home/veloXm/zzz/AddToClipmark.sh
-bindsym $mod+Insert exec --no-startup-id /home/veloXm/zzz/CheckClipmark.sh
+bindsym $mod+i exec --no-startup-id $HOME/zzz/AddToClipmark.sh
+bindsym $mod+Insert exec --no-startup-id $HOME/zzz/CheckClipmark.sh
 
 # Close dunst notification
 bindsym $mod+minus exec --no-startup-id dunstctl close
 bindsym $mod+$smod+minus exec --no-startup-id dunstctl close-all
 
 # Take a Screenshot
-bindsym Print exec /home/veloXm/zzz/screenshot.sh
-bindsym $smod+Print exec /home/veloXm/zzz/screenshot.sh shift
-bindsym Control+Print exec /home/veloXm/zzz/screenshot.sh ctrl
+bindsym Print exec $HOME/zzz/screenshot.sh
+bindsym $smod+Print exec $HOME/zzz/screenshot.sh shift
+bindsym $mod+Print exec $HOME/zzz/screenshot.sh mod
 
-
-####################### Temporary
-bindsym $mod+space exec /home/veloXm/zzz/temp/space.sh
-
+# Open one of the books
+bindsym $mod+space exec $HOME/zzz/bookOpener.sh
