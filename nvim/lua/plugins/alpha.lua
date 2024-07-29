@@ -32,14 +32,5 @@ dashboard.section.buttons.val = {
     dashboard.button("q", "  Quit", ":qa<CR>")
 }
 
-local handle, err = io.popen("fortune -s")
-if err or handle == nil then
-    dashboard.section.footer.val = "May the truth be found."
-    alpha.setup(dashboard.opts)
-    return
-end
-local fortune = handle:read("*a")
-handle:close()
-dashboard.section.footer.val = fortune
 alpha.setup(dashboard.opts)
 
