@@ -56,6 +56,7 @@ set $crust #11111b
 
 
 ### Applications ###
+
 # Start a terminal emulator
 bindsym $mod+Return exec --no-startup-id $wm_setting_app_terminal
 
@@ -67,6 +68,12 @@ bindsym $mod+p exec --no-startup-id $wm_setting_app_launcher
 
 # Start a file manager
 bindsym $mod+e exec --no-startup-id $wm_setting_app_files
+
+# Start Network manager
+bindsym Pause exec --no-startup-id $wm_setting_app_terminal --config-file=$HOME/.config/alacritty/alacrittyBW.toml --command nmtui
+
+# Start neomutt
+bindsym $mod+n exec --no-startup-id $wm_setting_app_terminal -e neomutt
 
 
 ### Workspaces ###
@@ -237,9 +244,6 @@ bindsym $mod+F4 exec $HOME/.config/rofi/powermenu/type-1/powermenu.sh
 
 # Shutdown
 bindsym $mod+$smod+F4 exec shutdown now
-
-# Network manager
-bindsym Pause exec --no-startup-id alacritty --config-file=$HOME/.config/alacritty/alacrittyBW.toml --command nmtui
 
 # Cycle through workspaces
 bindsym $alt+Tab workspace next
