@@ -1,11 +1,11 @@
-# vim: filetype=muttrc
 
 # MS OFFICE attachments
 # TODO: MAKE THIS WORKS
 
 # HTML
-text/html; w3m % -I {charset} -T text/html; copiousoutput;
-text/plain; nvim %s
+text/html; $HOME/zzz/openInBrowser.sh %s;
+# text/html; w3m % -I {charset} -T text/html; copiousoutput;
+text/plain; vim %s
 
 #PDFs
 application/pdf; /usr/bin/evince %s

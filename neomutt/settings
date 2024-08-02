@@ -7,7 +7,7 @@ set my_name = "Mitesh Soni"
 set imap_check_subscribed
 
 # Set preffered view modes
-auto_view text/html text/calendar application/ics # view html automatically
+auto_view text/plain text/calendar application/ics # view html automatically
 alternative_order text/html text/plain text/enriched text/*
 
 
