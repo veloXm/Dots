@@ -70,7 +70,7 @@ bindsym $mod+p exec --no-startup-id $wm_setting_app_launcher
 bindsym $mod+e exec --no-startup-id $wm_setting_app_files
 
 # Start Network manager
-bindsym Pause exec --no-startup-id $wm_setting_app_terminal --config-file=$HOME/.config/alacritty/alacrittyBW.toml --command nmtui
+bindsym Pause exec --no-startup-id alacritty --config-file=$HOME/.config/alacritty/alacrittyBW.toml --command nmtui
 
 # Start neomutt
 bindsym $mod+n exec --no-startup-id $wm_setting_app_terminal -e neomutt
